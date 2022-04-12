@@ -31,11 +31,11 @@
 <script type="text/javascript">
  
  var computerNumber=Math.ceil(Math.random()*100);
- var chances = 5;
+ var chances = 20;
   
   function restartGame(){
     computerNumber=Math.ceil(Math.random()*100);
-    chances=5
+    chances=20
     document.getElementById("restart-btn").setAttribute("hidden", true);
     document.getElementById("guess-btn").removeAttribute("disabled");
     document.getElementById("message").innerHTML="";
