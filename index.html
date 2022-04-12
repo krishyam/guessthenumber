@@ -31,11 +31,11 @@
 <script type="text/javascript">
  
  var computerNumber=Math.ceil(Math.random()*100);
- var chances = 20;
+ var chances = 10;
   
   function restartGame(){
     computerNumber=Math.ceil(Math.random()*100);
-    chances=20
+    chances=10
     document.getElementById("restart-btn").setAttribute("hidden", true);
     document.getElementById("guess-btn").removeAttribute("disabled");
     document.getElementById("message").innerHTML="";
@@ -49,16 +49,16 @@
     chances--
 
       if (guess > computerNumber){
-        document.getElementById("message").innerHTML = "Nope! Number is Higher " +chances +" chances remaining.";
+        document.getElementById("message").innerHTML = "Nope! Your Number is Higher. " +chances +" chances remaining.";
       }
       else if (guess < computerNumber){
-        document.getElementById("message").innerHTML = "Nope! Number is Lower " +chances +" chances remaining";
+        document.getElementById("message").innerHTML = "Nope! Your Number is Lower. " +chances +" chances remaining";
       }
       else {
-        document.getElementById("message").innerHTML = "You got this! Number is correct";
+        document.getElementById("message").innerHTML = "You got this! Number is correct.";
       }
       if (chances==0) {
-        document.getElementById("game_state").innerHTML = "Game over, the Number is "+ computerNumber;
+        document.getElementById("game_state").innerHTML = "Game over, My Number is "+ computerNumber;
         document.getElementById("guess-btn").setAttribute("disabled", true)
         document.getElementById("restart-btn").removeAttribute("hidden");
       }
